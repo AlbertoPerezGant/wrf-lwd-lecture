@@ -4,5 +4,8 @@ Los ficheros wrf son ficheros que contienen una gran cantidad de datos de previs
 
 En este repositorio se muestra un script para poder obtener histogramas de la dirección del viento en diferentes horas del día. Estos histogramas son individuales por lo que aparecerá unicamente una dirección pero es posible modificar el programa para poder obtener histogramas de diferentes tramos horarios.
 
-En primer lugar debemos contar con un directorio llamado **/wrf** que es de donde el script obtendrá la información relativa al archivo wrf. Este script está pensado para que el usuario pueda introducir desde su terminal el día del que quiere extraer la información a partir de un archivo con el formato **wrfout_d03_YYYY-MM-DD_hh_mm_ss** por lo que preguntará por terminal en que día desea realizar el analisis de entre una lista de posibles respuestas.
+En primer lugar debemos contar con un directorio llamado **/wrf** que es de donde el script obtendrá la información relativa al archivo wrf. Dentro de este directorio hay una serie de directorios con el nombre **/DD-MM-YYY** el cual tendremos que escribir en terminal. Una vez hecho esto podremos visualizar el resultado del analisis.
 
+El script wrf.py está pensado para que se pueda analizar la información extraida de un archivo wrf con el siguiente formato **wrfout_d03_YYYY-MM-DD_hh_mm_ss**, lo cual genera una serie de archivos txt que se guardarán en la carpeta mencionada en el anterior párrafo.
+
+En este repositorio no he puesto ningún archivo wrf ya que los que dispongo ocupan mucho espacio, pero debería de funcionar dando como resultado una serie de histogramas comparativos.
