@@ -25,13 +25,13 @@ rainT_0 = 0
 
 t0 = pandas.to_datetime(wrf.extract_times(ncfile, 0))
 
-txtfile = open('C:\\Users\\Usuario\\Documents\\ALBERTO_Local\\02_Proyectos\\CODELCO\\02_DESEMPEÑO\\WD_Calcs\\wrf\\Horario_{:0>2d}-{:0>2d}-{:d}.txt'.format(t0.day, t0.month, t0.year), "w")
+txtfile = open('C:\\Users\\Usuario\\Documents\\Current_directory\\wrf\\Horario_{:0>2d}-{:0>2d}-{:d}.txt'.format(t0.day, t0.month, t0.year), "w")
 txtfile.write("Fecha,Hora,Vel. Viento (km/h),Direccion Viento,Direccion Viento (letra),Precipitacion (mm),Temperatura,HR,Riesgo\r\n")
 
-txt2file = open('C:\\Users\\Usuario\\Documents\\ALBERTO_Local\\02_Proyectos\\CODELCO\\02_DESEMPEÑO\\WD_Calcs\\wrf\\Pronostico_{:0>2d}-{:0>2d}-{:d}.txt'.format(t0.day, t0.month, t0.year), "w")
+txt2file = open('C:\\Users\\Usuario\\Documents\\Current_directory\\wrf\\Pronostico_{:0>2d}-{:0>2d}-{:d}.txt'.format(t0.day, t0.month, t0.year), "w")
 txt2file.write("Fecha,Vel. Viento (km/h),Precipitacion (mm),Riesgo,T max,T min,HR media\r\n")
 
-txt3file = open('C:\\Users\\Usuario\\Documents\\ALBERTO_Local\\02_Proyectos\\CODELCO\\02_DESEMPEÑO\\WD_Calcs\\wrf\\Horario_10min_{:0>2d}-{:0>2d}-{:d}.txt'.format(t0.day, t0.month, t0.year), "w")
+txt3file = open('C:\\Users\\Usuario\\Documents\\Current_directory\\wrf\\Horario_10min_{:0>2d}-{:0>2d}-{:d}.txt'.format(t0.day, t0.month, t0.year), "w")
 txt3file.write("Fecha,Hora,Vel. Viento (m/s),Direccion Viento\r\n")
 
 fila_i = 19
@@ -49,7 +49,7 @@ avg_rh = 0
 
 altura_estacion = 640
 capa_dir = 3
-
+# Change UTC hour if another place is analized
 t00 = pandas.to_datetime(wrf.extract_times(ncfile, 0)).tz_localize('UTC').tz_convert('America/Santiago')
 tend = pandas.to_datetime(wrf.extract_times(ncfile, length-1)).tz_localize('UTC').tz_convert('America/Santiago')
 hoy = pandas.to_datetime("today")
